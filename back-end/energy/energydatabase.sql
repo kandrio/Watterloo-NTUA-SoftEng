@@ -13,7 +13,7 @@
 
 
 -- Dumping database structure for energymarket
-CREATE DATABASE IF NOT EXISTS `energymarket` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `energymarket` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `energymarket`;
 
 -- Dumping structure for table energymarket.actualtotalload
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `actualtotalload` (
   KEY `IX_ActualTotalLoad _AreaCodeId` (`AreaCodeId`),
   KEY `IX_ActualTotalLoad _AreaTypeCodeId` (`AreaTypeCodeId`),
   KEY `IX_ActualTotalLoad _MapCodeId` (`MapCodeId`)
-) ENGINE=InnoDB AUTO_INCREMENT=56120813 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=56120813 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `user_name` varchar(255) NOT NULL,
   `pass_word` varchar(255) NOT NULL,
   PRIMARY KEY (`Adminid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `aggregatedgenerationpertype` (
   KEY `IX_AggregatedGenerationPerType _ProductionTypeId` (`ProductionTypeId`),
   KEY `IX_AggregatedGenerationPerType _MapCodeId` (`MapCodeId`),
   KEY `IX_AggregatedGenerationPerType _AreaTypeCodeId` (`AreaTypeCodeId`)
-) ENGINE=InnoDB AUTO_INCREMENT=832887359 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=832887359 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -105,7 +105,8 @@ CREATE TABLE IF NOT EXISTS `allocatedeicdetail` (
   `ELCResponsibleMarketParticipantMRID` varchar(250) DEFAULT NULL,
   `IsDeleted` bit(1) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 -- Data exporting was unselected.
 
@@ -118,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `areatypecode` (
   `AreaTypeCodeNote` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `IX_AreaTypeCode_AreaTypeCodeText` (`AreaTypeCodeText`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -146,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `dayaheadtotalloadforecast` (
   KEY `IX_DayAheadTotalLoadForecast_AreaTypeCodeId` (`AreaTypeCodeId`),
   KEY `IX_DayAheadTotalLoadForecast_AreaCodeId` (`AreaCodeId`),
   KEY `IX_DayAheadTotalLoadForecast_ResolutionCodeId` (`ResolutionCodeId`)
-) ENGINE=InnoDB AUTO_INCREMENT=33723890 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33723890 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -159,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `mapcode` (
   `MapCodeNote` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `IX_MapCode_MapCodeText` (`MapCodeText`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -172,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `productiontype` (
   `ProductionTypeNote` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `IX_ProductionType_ProductionTypeText` (`ProductionTypeText`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -185,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `resolutioncode` (
   `ResolutionCodeNote` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `IX_ResolutionCode_ResolutionCodeText` (`ResolutionCodeText`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
@@ -198,9 +199,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `quota` int NOT NULL,
   `apikey` varchar(14) NOT NULL,
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Data exporting was unselected.
+-- Data exporting was unselected.usersusersmapcodedayaheadtotalloadforecastallocatedeicdetailactualtotalloadusers
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

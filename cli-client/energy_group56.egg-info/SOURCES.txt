@@ -9,4 +9,4 @@ energy_group56.egg-info/entry_points.txt
 energy_group56.egg-info/requires.txt
 energy_group56.egg-info/top_level.txt
 tests/__init__.py
-tests/functest.py
+tests/tests.py
